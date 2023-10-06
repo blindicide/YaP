@@ -1,5 +1,4 @@
 ﻿<?php
-header( "refresh:5;url=page5.html" );
 echo $_FILES['filename']['type'] . '<br>';
 
 if(move_uploaded_file($_FILES['filename']['tmp_name'],
@@ -10,4 +9,13 @@ if(move_uploaded_file($_FILES['filename']['tmp_name'],
     else{
         echo "Загрузка докумета не удалась. Обратитесь к администратору сети.";
 }
+
 ?>
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    </head>
+    <body>
+        <a href="page5.html">Вернуться на страницу загрузки</a>
+    </body>
+</html>
