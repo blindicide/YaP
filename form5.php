@@ -1,5 +1,5 @@
 ﻿<?php
-echo $_FILES['filename']['type'] . '<br>';
+echo "Тип загруженного документа: " . $_FILES['filename']['type'] . '<br>';
 
 if(move_uploaded_file($_FILES['filename']['tmp_name'],
                 'my_files/' . $_FILES['filename']['name'])){
