@@ -16,6 +16,8 @@ if(move_uploaded_file($_FILES['filename']['tmp_name'],
     <head>
     </head>
     <body>
+        <br>
+        <br>
         <a href="page5.html">Вернуться на страницу загрузки</a>
     </body>
 </html>
