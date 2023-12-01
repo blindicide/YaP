@@ -40,6 +40,12 @@ if (isset($_POST["ageavit"])) {
     }
 }
 
+if (isset($_GET["update"])) {
+    $sql = "UPDATE mydb SET name = :name, age = :age, salary = :salary WHERE mydb.id = :id";
+    $query = $conn->prepare($sql);
+    $query->execute(['name' => $_GET["name"], 'age' => $_GET["age"], 'salary' => $_GET["salary"], "id"=> $_GET["row_number"]]);
+}
+
 // Выборка данных
 $sql = "SELECT * FROM mydb";
 $result = $conn->query($sql);
@@ -63,6 +69,38 @@ while ($row = $result->fetch()) {
                         <i class='bi bi-trash'></i>
                     </button>
                 </form>
+            </td>
+            <td>
+                <button type='button' class=btn btn-primary' data-bs-toggle='modal' data-bs-target='#red_chel_".$row["id"]."'>
+                    <i class='bi bi-pen'></i>
+                </button>
+
+                <div class='modal fade' id='red_chel_" . $row["id"] . "' tabindex=*-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <form action = 'index.php' method = 'get'>
+                            <div class='modal-header'>
+                                <h5 class='modal-title' id='exampleModalLabel'>red_chel_" . $row["name"] . "</h5>
+                                <button type='button' class='btn-close' data-bs-dismiss='modal’ aria-label=’Закрыть'></button>
+                            </div>
+                            <div class='modal-body'>
+                                <label class='sr-only' for='name'>Name</label>
+                                <input type='text' class='form-control' name='name' id = 'name' value = '" . $row["name"] . "'>
+                                <label class='sr-only' for='name'>Name</label>
+                                <input type='text' class='form-control' name='age' id = 'age' value = '" . $row["age"] . "'>
+                                <label class='sr-only' for='name'>Name</label>
+                                <input type='text' class='form-control' name='salary' id = 'salary' value = '" . $row["salary"] . "'>
+                            </div>
+                            <div class='modal-footer'>
+                                <input type = 'hidden' name = 'update' value = '1'>
+                                <input type = 'hidden' name = 'row_number' value = '" . $row["id"] . "'>
+                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>3aкрыть</button>
+                                <button type='submit' class='btn btn-primary'>Сохранить изменения</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </td>
         </tr>";
 }
