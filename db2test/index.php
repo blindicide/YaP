@@ -15,7 +15,7 @@
 <body>
 
 <?php
-$conn = new PDO("mysql:host=localhost;dbname=j19458505_univ", "j19458505_univ", "23112004");
+$conn = new PDO("mysql:host=localhost;dbname=j19458505_univ", "j19458505_a", "23112004");
 
 // Удаление записи
 if (isset($_GET["delete"])) {
