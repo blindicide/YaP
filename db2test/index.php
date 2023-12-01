@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap.css -->
-    <link rel ="stylesheet" href="bootstrap (2).css"> 
+    <link rel ="stylesheet" href="http://yap.kka1.ru/bootstrap/bootstrap.css"> 
     <!-- Bootstrap Font Icon css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Bootstrap JavaScript (Popper.js и Bootstrap JS) -->
@@ -91,7 +91,7 @@ echo "</tbody></table>";
             <input type="text" class="form-control" id="name" name="name" required>
           </div>
           <div class="mb-3">
-            <label for="age" class="form-label">Возраст, лет:</label>
+            <label for="age" class="form-label">Дата рождения</label>
             <input type="date" class="form-control" id="age" name="age" required>
           </div>
           <div class="mb-3">
