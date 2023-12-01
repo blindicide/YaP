@@ -1,7 +1,7 @@
 <?php
 	try {
-		$conn = new PDO("mysql:host=localhost;dbname=j19458505_univ.mydb", "j19458505_a", "23112004");
-		$sql = "SELECT * FROM Users";
+		$conn = new PDO("mysql:host=localhost;dbname=j19458505_univ", "j19458505_a", "23112004");
+		$sql = "SELECT * FROM mydb";
 		$result = $conn->query($sql);
 		echo "<table><tr><th>Id</th><th>Name</th><th>Age</th><th>Salary</th></tr>";
 		while ($row = $result->fetch()){
