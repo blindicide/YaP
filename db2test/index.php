@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap.css -->
-    <link rel ="stylesheet" href="http://yap.kka1.ru/bootstrap/bootstrap.css"> 
+    <link rel ="stylesheet" href="http://yap.kka1.ru/bootstrap/css/bootstrap.css"> 
     <!-- Bootstrap Font Icon css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Bootstrap JavaScript (Popper.js и Bootstrap JS) -->
